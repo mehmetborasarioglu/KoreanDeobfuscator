@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+sentencepiece
+datasets
+evaluate
+scikit-learn
+pandas
