@@ -1,0 +1,7 @@
+torch>=1.12.0
+transformers>=4.36.0
+datasets>=2.18.0
+g2pk>=0.9.4
+tqdm>=4.66.0
+scikit-learn>=1.4.0
+pandas>=2.0.0

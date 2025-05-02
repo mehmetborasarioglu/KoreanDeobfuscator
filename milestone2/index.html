@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Text Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Korean Text Decoder</h1>
+            <div class="theme-toggle">
+                <button id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="inputText">Input Text</label>
+                <textarea 
+                    id="inputText" 
+                    placeholder="Enter phonetically altered Korean text... (e.g., 왜꾹윈에 팡뮨합니다)"
+                ></textarea>
+                <div class="controls">
+                    <select id="decodeMethod">
+                        <option value="hybrid">Hybrid (Recommended)</option>
+                        <option value="rule">Rule-based</option>
+                        <option value="context">Context-aware</option>
+                    </select>
+                    <button id="decodeButton" disabled>Decode</button>
+                    <button id="clearButton">Clear</button>
+                </div>
+            </div>
+
+            <div id="outputSection" class="output-section hidden">
+                <label>Decoded Text</label>
+                <div class="output-container">
+                    <textarea id="outputText" readonly></textarea>
+                    <button id="copyButton" title="Copy to clipboard">📋</button>
+                </div>
+                <div class="decomposition-section">
+                    <h3>Character Decomposition</h3>
+                    <div id="decompositionDisplay"></div>
+                </div>
+            </div>
+
+            <div class="statistics-section">
+                <h3>Statistics</h3>
+                <div id="statsDisplay">
+                    <p>Total Decoded: <span id="totalDecoded">0</span></p>
+                    <p>Successful: <span id="successfulDecodes">0</span></p>
+                    <p>Failed: <span id="failedDecodes">0</span></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Demo Version. 0.1</p>
+        </footer>
+    </div>
+
+    <script src="decode.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
